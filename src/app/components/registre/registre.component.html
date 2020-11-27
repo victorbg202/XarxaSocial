@@ -1,1 +1,46 @@
-<p>registre works!</p>
+<!-- Formulario de registro -->
+<form class="container-fluid" style="max-width: 65%;">
+  <!-- Nombre -->
+  <div class="form-group">
+    <label>Nom:</label>
+    <input #VNom type="text" class="form-control" placeholder="Pepe">
+    <!-- <small id="emailHelp" class="form-text text-muted">{{errNom}}</small> -->
+  </div>
+  <!-- Apellidos -->
+  <div class="form-group">
+    <label>Cognoms:</label>
+    <input #VCognom type="text" class="form-control" placeholder="Pepe">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <!-- Edad -->
+  <div class="form-group">
+    <label>Edat:</label>
+    <input #VEdat type="number" class="form-control" placeholder="21">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <!-- Descripcion -->
+  <div class="form-group">
+    <label>Descripció:</label>
+    <input #VDescripcio type="text" class="form-control">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <!-- Correo -->
+  <div class="form-group">
+    <label>Email:</label>
+    <input #VEmail type="text" class="form-control" placeholder="hola@hola.com">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <!-- Contraseña -->
+  <div class="form-group">
+    <label>Contrasenya:</label>
+    <input #VContrasena type="password" class="form-control" placeholder="Pepe">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <!-- Confirmar contraseña -->
+  <div class="form-group">
+    <label>Confirmar contrasenya:</label>
+    <input #VConfirmContrasena type="password" class="form-control" placeholder="Pepe">
+    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+  </div>
+  <button class="btn btn-primary">Registrar</button>
+</form>
