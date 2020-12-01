@@ -10,7 +10,6 @@ export class LlistaUsuarisComponent implements OnInit {
 
   users_admin: UserListAdmin = null;
   listaUsers: UserListAdmin[] = [];
-  listaUsers1: UserListAdmin[] = [];
   private desc:string ="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ";
   private rut_img:string ="../../../../assets/img/icono_user.png";
 

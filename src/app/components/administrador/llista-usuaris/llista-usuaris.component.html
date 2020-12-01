@@ -1,15 +1,8 @@
-<div class="row" *ngIf="listaUsers.length !=0">
-  <div class="col-md-4" *ngFor="let user of listaUsers">
-
-  </div>
-</div>
-
+<!--Contenido de la tabla-->
 <div class="px-4">
-
   <div class="table-wrapper">
     <!--Table-->
     <table class="table">
-
       <!--Table head-->
       <thead class="thead-dark">
       <tr>
@@ -38,7 +31,6 @@
       </tr>
       </thead>
       <!--Table head-->
-
       <!--Table body-->
       <tbody>
       <tr *ngFor="let row of listaUsers;let i = index">
@@ -63,6 +55,7 @@
   </div>
 </div>
 
+<!--Se mostrará este alert si no hay nada en el array-->
 <div class="alert alert-danger ml-4" *ngIf="listaUsers.length == 0">
   No hay nada creado!
 </div>
