@@ -13,12 +13,17 @@ export class RegistreComponent implements OnInit {
 
   errLloc: string = "";
   errNom: string = "";
+  errApellido = "";
+  errEdat = "";
+  errFoto = "";
+  errDesc = "";
+  errCont = "";
   errEmail = ['^[^@]+@[^@]+\.[a-zA-Z]{2,}$'];
   errText: string = "";
   mostrarInfo: string = "";
   errCheck?;
 
-  enviarDatos(nom, cognom, url, text, email, descripcio) {
+  enviarDatos(nom, cognom, edat, foto, desc, email, cont, confCont) {
 
     //Comp nombre
     if(nom == ""){
@@ -29,9 +34,34 @@ export class RegistreComponent implements OnInit {
 
     //Comp Apellidos
     if(cognom == ""){
-      this.errLloc = "Cognom incorrecte introdueix un lloc";
+      this.errApellido = "Cognom incorrecte introdueix un lloc";
     }else {
-      this.errLloc = "Lloc correct";
+      this.errApellido = "Cognom correct";
+    }
+
+    //Comp Foto
+    if(edat == ""){
+      this.errEdat = "Edat incorrecte introdueix una edat";
+    }else {
+      this.errEdat = "Edat correcta";
+    }
+
+    //Comp Foto
+    if(foto == ""){
+      this.errFoto = "Foto incorrecte introdueix una foto";
+    }else {
+      this.errFoto = "Foto correcta";
+    }
+
+    //Comp desc
+    if(desc == ""){
+      this.errDesc = "Descripcio incorrecte introdueix una descripcio";
+    }else {
+      if(desc.length < 4){
+        this.errText = "El text es molt curt";
+      }else {
+        this.errText = "Text correcte";
+      }
     }
 
     //Comp email
@@ -41,23 +71,20 @@ export class RegistreComponent implements OnInit {
       this.mostrarInfo = "Email incorrecto";
     }
 
-    //
-    if(descripcio == ""){
-      this.errLloc = "Descripcio incorrecte introdueix una descripcio";
+    //Comp Cont
+    if((cont == "" || confCont == "") && (cont != confCont)){
+      this.errCont = "Contrasenya incorrecte introdueix una foto";
     }else {
-      if(text.length < 2){
-        this.errText = "El text es molt curt";
-      }else {
-        this.errText = "Text correcte";
-      }
+      this.errCont = "Contrasenya correcta";
     }
 
-    if (this.errCheck = document.getElementById("Check")/*.checked*/ && nom != "" &&  lloc!="" && email.match(this.errEmail)  && text.length > 2) {
+
+    /*if (this.errCheck = document.getElementById("Check")/*.checked/ && nom != "" &&  lloc!="" && email.match(this.errEmail)  && text.length > 2) {
       this.errCheck = "";
       //this.carta.push(new GrupEvents(nom, lloc, url , text, email));
     }else {
       this.errCheck = "Acepar condicions";
-    }
+    }*/
   }
 
 }
