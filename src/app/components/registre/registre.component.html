@@ -9,7 +9,7 @@
   <!-- Apellidos -->
   <div class="form-group">
     <label>Cognoms:</label>
-    <input #VCognom type="text" class="form-control" placeholder="Pepe">
+    <input #VCognom type="text" class="form-control" placeholder="Palotes">
     <small id="emailHelp" class="form-text text-muted">{{errApellido}}</small>
   </div>
   <!-- Edad -->
@@ -39,13 +39,13 @@
   <!-- Contraseña -->
   <div class="form-group">
     <label>Contrasenya:</label>
-    <input #VContrasena type="password" class="form-control" placeholder="Pepe">
+    <input #VContrasena type="password" class="form-control" placeholder="**********">
   </div>
   <!-- Confirmar contraseña -->
   <div class="form-group">
     <label>Confirmar contrasenya:</label>
-    <input #VConfirmContrasena type="password" class="form-control" placeholder="Pepe">
+    <input #VConfirmContrasena type="password" class="form-control" placeholder="*********">
     <small id="emailHelp" class="form-text text-muted">{{errCont}}</small>
   </div>
-  <input type="button" class="btn btn-primary" value="Registrar" (click)="enviarDatos(VNom.value, VCognom.value, VEdat.value,VFoto.value, VDescripcio.value, VEmail.value, VContrasena, VConfirmContrasena)"/>
+  <input type="button" class="btn btn-primary" value="Registrar" (click)="enviarDatos(VNom.value, VCognom.value, VEdat.value,VFoto.value, VDescripcio.value, VEmail.value, VContrasena.value, VConfirmContrasena.value)"/>
 </form>

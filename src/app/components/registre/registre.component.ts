@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-registre',
   templateUrl: './registre.component.html',
   styleUrls: ['./registre.component.css']
 })
+
 export class RegistreComponent implements OnInit {
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }
 
+  //
   errLloc: string = "";
   errNom: string = "";
   errApellido = "";
@@ -18,18 +21,20 @@ export class RegistreComponent implements OnInit {
   errFoto = "";
   errDesc = "";
   errCont = "";
-  errEmail = ['^[^@]+@[^@]+\.[a-zA-Z]{2,}$'];
+  errEmail = "";
+  compEmail = ['^[^@]+@[^@]+\.[a-zA-Z]{2,}$'];
   errText: string = "";
   mostrarInfo: string = "";
   errCheck?;
 
+  //Recibir y comprobar datos
   enviarDatos(nom, cognom, edat, foto, desc, email, cont, confCont) {
 
     //Comp nombre
     if(nom == ""){
       this.errNom = "Nom incorrecte introdueix un nom";
     }else {
-      this.errNom = "Nom correct";
+      this.errNom = "Nom correcte";
     }
 
     //Comp Apellidos
@@ -39,7 +44,7 @@ export class RegistreComponent implements OnInit {
       this.errApellido = "Cognom correct";
     }
 
-    //Comp Foto
+    //Comp Edat
     if(edat == ""){
       this.errEdat = "Edat incorrecte introdueix una edat";
     }else {
@@ -65,26 +70,36 @@ export class RegistreComponent implements OnInit {
     }
 
     //Comp email
-    if(email.match(this.errEmail)){
-      this.mostrarInfo = "Email correcto";
+    if(email != "" && email.match(this.compEmail)){
+      this.errEmail = "Email correcte";
     }else{
-      this.mostrarInfo = "Email incorrecto";
+      this.errEmail = "Email incorrecte";
     }
 
     //Comp Cont
-    if((cont == "" || confCont == "") && (cont != confCont)){
-      this.errCont = "Contrasenya incorrecte introdueix una foto";
-    }else {
+    if(cont != "" && (cont=confCont)) {
       this.errCont = "Contrasenya correcta";
+    }else {
+      this.errCont = "Contrasenya incorrecta";
     }
 
+    //Push y feedback
+    if (email.match(this.compEmail) && (cont=confCont) && nom != "" &&  cognom!="" && edat!="" && foto!="" && email!="" && desc.length > 4 && cont!="") {
+      //Guardar usuario
+      //this.??.push(new ??(nom, cognom, edat, foto, desc, email, cont));
 
-    /*if (this.errCheck = document.getElementById("Check")/*.checked/ && nom != "" &&  lloc!="" && email.match(this.errEmail)  && text.length > 2) {
-      this.errCheck = "";
-      //this.carta.push(new GrupEvents(nom, lloc, url , text, email));
+      //Mensaje OK
+      Swal.fire({
+        icon: 'success',
+        text: 'Registrat!'
+      })
     }else {
-      this.errCheck = "Acepar condicions";
-    }*/
+      //Mensaje de error
+      Swal.fire({
+        icon: 'error',
+        text: 'Alguna cosa ha anat malament!'
+      })
+    }
   }
 
 }
