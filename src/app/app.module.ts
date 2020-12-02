@@ -9,8 +9,9 @@ import { DetallsPerfilComponent } from './components/perfil/detalls-perfil/detal
 import { RegistreComponent } from './components/registre/registre.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { LlistaUsuarisComponent } from './components/administrador/llista-usuaris/llista-usuaris.component';
-import { HeaderComponent } from './components/header/header.component';
+
 import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     RegistreComponent,
     AdministradorComponent,
     LlistaUsuarisComponent,
-    HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
