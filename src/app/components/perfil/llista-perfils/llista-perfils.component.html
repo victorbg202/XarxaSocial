@@ -1,3 +1,4 @@
-<div class="list-group">
-  <a class="list-group-item list-group-item-action" (click)="topoSelected($event)" > {{usuarios.firstname}} </a>
+<div class="list-group" *ngFor="let usuario of usuarios">
+  <app-element-llista-perfil [user]="usuario" (selectEvent)="informarUser($event)"></app-element-llista-perfil>
 </div>
+

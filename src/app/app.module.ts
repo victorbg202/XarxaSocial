@@ -9,6 +9,7 @@ import { DetallsPerfilComponent } from './components/perfil/detalls-perfil/detal
 import { RegistreComponent } from './components/registre/registre.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { LlistaUsuarisComponent } from './components/administrador/llista-usuaris/llista-usuaris.component';
+import { ElementLlistaPerfilComponent } from './components/perfil/element-llista-perfil/element-llista-perfil.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LlistaUsuarisComponent } from './components/administrador/llista-usuari
     DetallsPerfilComponent,
     RegistreComponent,
     AdministradorComponent,
-    LlistaUsuarisComponent
+    LlistaUsuarisComponent,
+    ElementLlistaPerfilComponent
   ],
   imports: [
     BrowserModule,

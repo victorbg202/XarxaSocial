@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { User } from 'src/app/models/user.model';
 
 @Component({
   selector: 'app-detalls-perfil',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallsPerfilComponent implements OnInit {
 
+  @Input() user: User;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.user = new User('','',0,'','','','');
+
   }
+
+
+
+
 
 }
