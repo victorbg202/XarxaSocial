@@ -2,3 +2,11 @@
 .icono{
   max-width: 95%;
 }
+
+td{
+  padding: 30px;
+}
+
+th{
+  padding: 35px;
+}

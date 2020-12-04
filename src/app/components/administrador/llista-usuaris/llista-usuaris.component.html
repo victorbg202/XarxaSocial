@@ -3,32 +3,28 @@
 
       <!--Table-->
       <table class="table">
+
         <!--Table head-->
         <thead class="thead-dark">
         <tr>
-
           <th scope="col">
             <a>Nom Usuari</a>
           </th>
           <th scope="col">
             <a >Cognom Usuari</a>
           </th>
-
-
           <th scope="col">
             <a>Correu</a>
           </th>
-
           <th scope="col">
             <a >Acción</a>
           </th>
         </tr>
         </thead>
-        <!--Table head-->
+
         <!--Table body-->
         <tbody>
         <tr *ngFor="let row of listaUsers;let i = index">
-
           <td class="">{{row.nom_user}}</td>
           <td class="">{{row.apellido_user}}</td>
           <td class="">{{row.correu}}</td>
@@ -39,15 +35,17 @@
           </td>
         </tr>
         </tbody>
-        <!--Table body-->
+
       </table>
-      <!--Table-->
+
+       <!--Se mostrará este alert si no hay nada en el array-->
       <div class="alert alert-danger" *ngIf="listaUsers.length == 0">
         No hay nada creado!
       </div>
+      
     </div>
 
-  <!--Se mostrará este alert si no hay nada en el array-->
+
 
 
 
