@@ -14,6 +14,7 @@ import { ElementLlistaPerfilComponent } from './components/perfil/element-llista
 
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { Error404Component } from './components/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     LlistaUsuarisComponent,
     FooterComponent,
     NavbarComponent,
-    ElementLlistaPerfilComponent
+    ElementLlistaPerfilComponent,
+    Error404Component
 
   ],
   imports: [
