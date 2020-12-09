@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { User } from 'src/app/models/user.model';
 
 @Component({
@@ -6,19 +6,10 @@ import { User } from 'src/app/models/user.model';
   templateUrl: './detalls-perfil.component.html',
   styleUrls: ['./detalls-perfil.component.css']
 })
-export class DetallsPerfilComponent implements OnInit {
+export class DetallsPerfilComponent {
 
   @Input() user: User;
 
   constructor() { }
-
-  ngOnInit(): void {
-    this.user = new User('','',0,'','','','');
-
-  }
-
-
-
-
 
 }

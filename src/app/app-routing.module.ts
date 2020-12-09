@@ -7,14 +7,13 @@ import { LlistaPerfilsComponent } from './components/perfil/llista-perfils/llist
 import { PerfilComponent } from './components/perfil/perfil.component';
 
 const routes: Routes = [
-  {path: "**" ,redirectTo: "perfil"},
-  {path: "", pathMatch: "full", redirectTo: "perfil"},
+  { path: "", pathMatch: "full", redirectTo: "perfil"},
   { path: 'registro' , component: RegistreComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'detalls-perfil', component: DetallsPerfilComponent },
   { path: 'llista-perfils', component: LlistaPerfilsComponent },
-  {path: 'admin', component: AdministradorComponent}
-
+  { path: 'admin', component: AdministradorComponent},
+  { path: "**" ,redirectTo: "perfil"}
 ];
 
 @NgModule({

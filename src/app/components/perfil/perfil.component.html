@@ -1,14 +1,18 @@
 <div class="container pt-5">
   <div class="row">
     <div class="col-4">
+      <!-- LLISTA DE PERFILS D'USUARI-->
       <app-llista-perfils [usuarios]="usuarios" (informarEvent)="changeUserSelected($event)"></app-llista-perfils>
     </div>
+      <!-- DETALL DEL PERFIL D'USUARI-->
     <div class="col-8">
       <app-detalls-perfil [user]="userSelected"></app-detalls-perfil>
     </div>
+      <!-- BUTTON PER AFEGIR PERFIL D'USUARI -->
     <button type="button" class="btn btn-success btn-lg btn-block mt-5" (click)="mostrarForm()">AFEGIR PERFIL D'USUARI</button>
   </div>
 </div>
+      <!-- FORMULARI DE REGISTRE D'UN USUARI NOU-->
 <div *ngIf="mostrar === true" class="container">
   <app-registre (informarEvent)="addFormUser($event)"></app-registre>
 </div>

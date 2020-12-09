@@ -19,7 +19,7 @@ export class LlistaPerfilsComponent implements OnInit {
 
   }
 
-
+  //Output de EventEmitter per enviar usuari al pare
   informarUser(event) {
     this.informarEvent.emit(event);
   }
