@@ -9,6 +9,7 @@ import { DetallsPerfilComponent } from './components/perfil/detalls-perfil/detal
 import { RegistreComponent } from './components/registre/registre.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { LlistaUsuarisComponent } from './components/administrador/llista-usuaris/llista-usuaris.component';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ElementLlistaPerfilComponent } from './components/perfil/element-llista-perfil/element-llista-perfil.component';
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ElementLlistaPerfilComponent } from './components/perfil/element-llista
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
