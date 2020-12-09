@@ -2,10 +2,12 @@
 
 .navbar {
   transition: all 0.4s;
+  background-color: #fff;
+
 }
 
 .navbar .nav-link {
-  color: #fff;
+  color: #000;
 }
 
 .navbar .nav-link:hover,
@@ -15,7 +17,7 @@
 }
 
 .navbar .navbar-brand {
-  color: #fff;
+  color: #000;
 }
 
 
