@@ -12,6 +12,9 @@ import { LlistaUsuarisComponent } from './components/administrador/llista-usuari
 import { ReactiveFormsModule } from '@angular/forms';
 import { ElementLlistaPerfilComponent } from './components/perfil/element-llista-perfil/element-llista-perfil.component';
 
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +24,10 @@ import { ElementLlistaPerfilComponent } from './components/perfil/element-llista
     RegistreComponent,
     AdministradorComponent,
     LlistaUsuarisComponent,
+    FooterComponent,
+    NavbarComponent,
     ElementLlistaPerfilComponent
+
   ],
   imports: [
     BrowserModule,
