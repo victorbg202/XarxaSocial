@@ -1,1 +1,14 @@
-<p>detalls-perfil works!</p>
+<div class="card">
+  <div class="row no-gutters">
+      <div class="col-sm-5">
+          <img class="card-img" src="{{user.imageURL}}">
+      </div>
+      <div class="col-sm-7">
+          <div class="card-body">
+              <h5 class="card-title">{{user.firstname}} {{user.lastname}}</h5>
+              <p class="card-text">{{user.description}}<br>{{user.email}}<br>{{user.age}} anys<br><i>{{user.password}}</i></p>
+              <a class="btn btn-primary">Veure Perfil</a>
+          </div>
+      </div>
+  </div>
+</div>
