@@ -16,6 +16,7 @@ export class ElementLlistaPerfilComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  //Ouput EventEmitter per enviar informació del usuari al component pare
   userSelected() {
     this.selectEvent.emit(this.user);
   }

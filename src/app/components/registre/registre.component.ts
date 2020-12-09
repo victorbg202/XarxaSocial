@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { RxReactiveFormsModule, RxwebValidators } from '@rxweb/reactive-form-validators';
+import { RxwebValidators } from '@rxweb/reactive-form-validators';
+import { User } from 'src/app/models/user.model';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -10,6 +11,9 @@ import Swal from 'sweetalert2';
 })
 
 export class RegistreComponent {
+
+    usuarios: User = null;
+    @Output() informarEvent = new EventEmitter<User>();
 
     registre = new FormGroup({
       nom: new FormControl('', Validators.required),
@@ -30,8 +34,18 @@ export class RegistreComponent {
     }
 
     push() {
-      //push array
+      this.usuarios = new User(
+        this.registre.get('nom').value,
+        this.registre.get('cognom').value,
+        this.registre.get('edat').value,
+        this.registre.get('foto').value,
+        this.registre.get('desc').value,
+        this.registre.get('email').value,
+        this.registre.get('cont').value
+      );
+      this.informarEvent.emit(this.usuarios);
     }
+
 }
 
 
