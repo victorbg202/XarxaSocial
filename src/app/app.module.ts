@@ -10,6 +10,7 @@ import { RegistreComponent } from './components/registre/registre.component';
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { LlistaUsuarisComponent } from './components/administrador/llista-usuaris/llista-usuaris.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ElementLlistaPerfilComponent } from './components/perfil/element-llista-perfil/element-llista-perfil.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     DetallsPerfilComponent,
     RegistreComponent,
     AdministradorComponent,
-    LlistaUsuarisComponent
+    LlistaUsuarisComponent,
+    ElementLlistaPerfilComponent
   ],
   imports: [
     BrowserModule,
