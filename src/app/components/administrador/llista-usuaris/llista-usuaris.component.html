@@ -1,1 +1,51 @@
-<p>llista-usuaris works!</p>
+  <!--Contenido de la tabla-->
+  <div class="table table-striped w-auto">
+
+      <!--Table-->
+      <table class="table">
+
+        <!--Table head-->
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">
+            <a>Nom Usuari</a>
+          </th>
+          <th scope="col">
+            <a >Cognom Usuari</a>
+          </th>
+          <th scope="col">
+            <a>Correu</a>
+          </th>
+          <th scope="col">
+            <a >Acció</a>
+          </th>
+        </tr>
+        </thead>
+
+        <!--Table body-->
+        <tbody>
+        <tr *ngFor="let row of listaUsers;let i = index">
+          <td class="">{{row.nom_user}}</td>
+          <td class="">{{row.apellido_user}}</td>
+          <td class="">{{row.correu}}</td>
+          <td>
+            <span>
+              <button type="button" class="btn btn-danger" (click)="borrar(row.id_user)">Borrar</button>
+            </span>
+          </td>
+        </tr>
+        </tbody>
+
+      </table>
+
+       <!--Se mostrará este alert si no hay nada en el array-->
+      <div class="alert alert-danger text-center" *ngIf="listaUsers.length == 0">
+        No hay nada creado!
+      </div>
+
+    </div>
+
+
+
+
+
