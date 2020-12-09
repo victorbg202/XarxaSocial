@@ -1,0 +1,18 @@
+form {
+  margin-top: 40px;
+  margin-bottom: 25px;
+  border: solid 2px rgb(122, 122, 122);
+  padding: 20px;
+  border-radius: 15px;
+  background-color: #b1ece5;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  font-weight: 600;
+  margin: 0;
+  margin-bottom: 3px;
+}

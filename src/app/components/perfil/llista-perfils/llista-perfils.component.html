@@ -1,1 +1,4 @@
-<p>llista-perfils works!</p>
+<div class="list-group" *ngFor="let usuario of usuarios">
+  <app-element-llista-perfil [user]="usuario" (selectEvent)="informarUser($event)"></app-element-llista-perfil>
+</div>
+
