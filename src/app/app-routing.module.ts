@@ -6,8 +6,8 @@ import { LlistaPerfilsComponent } from './components/perfil/llista-perfils/llist
 import { PerfilComponent } from './components/perfil/perfil.component';
 
 const routes: Routes = [
-  {path: "**" ,redirectTo: "inicio"},
-  {path: "", pathMatch: "full", redirectTo: "inici"},
+  {path: "**" ,redirectTo: "perfil"},
+  {path: "", pathMatch: "full", redirectTo: "perfil"},
   { path: 'registro' , component: RegistreComponent },
   { path: 'perfil', component: PerfilComponent },
   { path: 'detalls-perfil', component: DetallsPerfilComponent },
